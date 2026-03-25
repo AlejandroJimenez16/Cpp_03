@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:26:05 by alejandj          #+#    #+#             */
-/*   Updated: 2026/03/24 13:02:32 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/03/25 17:29:56 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,8 @@ void ClapTrap::attack(const std::string& target)
 {
 	if (_hitPoints <= 0)
 	{
-		std::cout << "ClapTrap <" << _name << "> can't attack, dead!" << std::endl;
+		std::cout << "ClapTrap <" << _name << "> can't attack, "
+				  << RED << "is dead!" << RESET << std::endl;
 		return ;
 	}
 	else if (_energyPoints <= 0)
@@ -72,7 +73,7 @@ void ClapTrap::attack(const std::string& target)
 		_energyPoints--; 
 		std::cout << "ClapTrap <" << _name << ">"
 				  << YELLOW << " attacks " << RESET << target 
-				  << ", causing " << BOLD << YELLOW << _attackDamage << RESET
+				  << ", causing " << YELLOW << _attackDamage << RESET
 				  << " points of damage!" << std::endl;  
 	}
 }
@@ -82,22 +83,24 @@ void ClapTrap::takeDamage(unsigned int amount)
 	if (_hitPoints <= 0)
 	{
 		std::cout << "ClapTrap <" << _name << "> "
-				  << BOLD << RED << "is already dead!!" << std::endl;
+				  << RED << "is already dead!!" << RESET << std::endl;
 	}
 	else if (amount >= _hitPoints)
 	{
 		_hitPoints = 0;
 		std::cout << "ClapTrap <" << _name << ">"
-				  << BOLD << RED << " dead!!" << RESET << std::endl;
+				  << " receives " << YELLOW << amount << RESET
+				  << " points of damage!,"
+				  << RED << " dead!!" << RESET << std::endl;
 		return ;
 	}
 	else
 	{
 		_hitPoints -= amount;
 		std::cout << "ClapTrap <" << _name << ">"
-				  << " receives " << amount
+				  << " receives " << YELLOW << amount << RESET
 				  << " points of damage!, HP left: "
-				  << BOLD << GREEN << _hitPoints << RESET << std::endl;
+				  << GREEN << _hitPoints << RESET << std::endl;
 	}
 }
 
@@ -105,7 +108,8 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (_hitPoints <= 0)
 	{
-		std::cout << "ClapTrap <" << _name << "> can't be repaired, dead!" << std::endl;
+		std::cout << "ClapTrap <" << _name << "> can't be repaired, " 
+				  << RED << "is dead!" << RESET << std::endl;
 		return ;
 	}
 	else if (_energyPoints <= 0)
@@ -119,6 +123,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 		_energyPoints--;
 		std::cout << "ClapTrap <" << _name << ">"
 				  << GREEN << " repairs" << RESET << " itself for " << amount
-				  << " hit points!, Current HP: " << BOLD << GREEN << _hitPoints << RESET << std::endl;
+				  << " hit points!, Current HP: "
+				  << GREEN << _hitPoints << RESET << std::endl;
 	}
 }
