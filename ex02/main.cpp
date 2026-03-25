@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:49:36 by alejandj          #+#    #+#             */
-/*   Updated: 2026/03/25 16:50:07 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/03/25 17:49:20 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int main(void)
 	b.takeDamage(10);
 
 	std::cout << "\nFragTrap object:" << std::endl;
-	c.takeDamage(101);
+	c.takeDamage(99);
 	std::cout << std::endl;
 
 	std::cout << "================== Repairs ===================" << std::endl;
