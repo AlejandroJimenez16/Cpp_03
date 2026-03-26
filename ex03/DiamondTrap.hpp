@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 12:56:51 by alejandj          #+#    #+#             */
-/*   Updated: 2026/03/26 13:55:42 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/03/26 15:51:16 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ class DiamondTrap: public ScavTrap, public FragTrap
 
 	public:
 		DiamondTrap();
-		//DiamondTrap(std::string);
-		//DiamondTrap(const DiamondTrap& object);
-		//DiamondTrap& operator=(const DiamondTrap& object);
-		//~DiamondTrap();
+		DiamondTrap(std::string);
+		DiamondTrap(const DiamondTrap& object);
+		DiamondTrap& operator=(const DiamondTrap& object);
+		~DiamondTrap();
 
-		//void whoAmI();
+		void whoAmI();
 		
 };
 
