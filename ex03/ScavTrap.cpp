@@ -6,14 +6,12 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/20 20:43:12 by alejandj          #+#    #+#             */
-/*   Updated: 2026/03/25 17:40:20 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/03/26 17:08:39 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-// Call de ClapTrap constructor {_name = "Default", _hitPoints = 10, _energyPoints = 10, _attackDamage = 0}
-// But overwrite the values _hitPoints, _energyPoints, _attackDamage
 ScavTrap::ScavTrap(): ClapTrap()
 {
 	std::cout << MAGENTA << "ScavTrap: Default constructor called" << RESET << std::endl;
@@ -30,7 +28,6 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 	_attackDamage = 20;
 }
 
-// Call ClapTrap copy constructor to copy the base (common) part of ScavTrap
 ScavTrap::ScavTrap(const ScavTrap& object): ClapTrap(object)
 {
 	std::cout << BLUE << "ScavTrap: Copy constructor called" << RESET << std::endl;
@@ -39,7 +36,8 @@ ScavTrap::ScavTrap(const ScavTrap& object): ClapTrap(object)
 ScavTrap& ScavTrap::operator=(const ScavTrap& object)
 {
 	std::cout << WHITE << "ScavTrap: Copy assignment operator called" << RESET << std::endl;
-	ClapTrap::operator=(object);
+	if (this != &object)
+		ClapTrap::operator=(object);
 
 	return (*this);
 }
