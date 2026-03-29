@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:49:36 by alejandj          #+#    #+#             */
-/*   Updated: 2026/03/26 14:00:51 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/03/29 20:43:14 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,18 @@
 
 int main(void)
 {
-	/*
-	ClapTrap a("Marvin");
-	ScavTrap b;
-	FragTrap c("R2-D2");
+	std::cout << "ClapTrap creation:" << std::endl;
+	ClapTrap a("CT");
+
+	std::cout << "\nScavTrap creation:" << std::endl;
+	ScavTrap b("ST");
+
+	std::cout << "\nFragTrap creation:" << std::endl;
+	FragTrap c("FT");
+
+	std::cout << "\nDiamondTrap creation:" << std::endl;
+	DiamondTrap d("DT");
+	
 
 	std::cout << "\n================== Attacks ==================" << std::endl;
 
@@ -32,6 +40,9 @@ int main(void)
 	
 	std::cout << "\nFragTrap object:" << std::endl;
 	c.attack("42");
+
+	std::cout << "\nDiamondTrap object:" << std::endl;
+	d.attack("42");
 	std::cout << std::endl;
 	
 	std::cout << "================== Damage ===================" << std::endl;
@@ -45,6 +56,9 @@ int main(void)
 
 	std::cout << "\nFragTrap object:" << std::endl;
 	c.takeDamage(99);
+
+	std::cout << "\nDiamondTrap object:" << std::endl;
+	d.takeDamage(50);
 	std::cout << std::endl;
 
 	std::cout << "================== Repairs ===================" << std::endl;
@@ -57,13 +71,22 @@ int main(void)
 
 	std::cout << "\nFragTrap object:" << std::endl;
 	c.beRepaired(50);
+
+	std::cout << "\nDiamondTrap object:" << std::endl;
+	d.beRepaired(10);
 	std::cout << std::endl;
 
+	std::cout << "================== Skills ===================" << std::endl;
+	
+	std::cout << "\nScavTrap:" << std::endl;
 	b.guardGate();
-	std::cout << std::endl;
+
+	std::cout << "\nFragTrap:" << std::endl;
 	c.highFivesGuys();
+
+	std::cout << "\nDiamondTrap:" << std::endl;
+	d.whoAmI();
 	
 	std::cout << "=============================================================\n" << std::endl;
 	return 0;
-	*/
 }
