@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:49:36 by alejandj          #+#    #+#             */
-/*   Updated: 2026/03/25 17:49:20 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/03/30 12:43:32 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,16 @@
 
 int main(void)
 {
-	ClapTrap a("Marvin");
-	ScavTrap b;
-	FragTrap c("R2-D2");
+	std::cout << "ClapTrap creation:" << std::endl;
+	ClapTrap a("CT");
 
-	std::cout << "\n================== Attacks ==================" << std::endl;
+	std::cout << "\nScavTrap creation:" << std::endl;
+	ScavTrap b("ST");
+
+	std::cout << "\nFragTrap creation:" << std::endl;
+	FragTrap c("FT");
+
+	std::cout << "\n================== Attacks ===================" << std::endl;
 
 	std::cout << "\nClapTrap object:" << std::endl;
 	a.attack("42");
@@ -32,7 +37,7 @@ int main(void)
 	c.attack("42");
 	std::cout << std::endl;
 	
-	std::cout << "================== Damage ===================" << std::endl;
+	std::cout << "================== Damage ====================" << std::endl;
 
 	std::cout << "\nClapTrap object:" << std::endl;
 	a.takeDamage(11);
@@ -57,8 +62,12 @@ int main(void)
 	c.beRepaired(50);
 	std::cout << std::endl;
 
+	std::cout << "================== Skills ===================" << std::endl;
+
+	std::cout << "\nScavTrap:" << std::endl;
 	b.guardGate();
-	std::cout << std::endl;
+	
+	std::cout << "\nFragTrap:" << std::endl;
 	c.highFivesGuys();
 	
 	std::cout << "=============================================================\n" << std::endl;

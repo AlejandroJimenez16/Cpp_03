@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:49:36 by alejandj          #+#    #+#             */
-/*   Updated: 2026/03/24 13:26:40 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/03/30 12:39:22 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 
 int main(void)
 {
+	std::cout << "ClapTrap creation:" << std::endl;
 	ClapTrap a;
 	ClapTrap b("Marvin");
 	
+	std::cout << "\nScavTrap creation:" << std::endl;
 	ScavTrap c("Marvin");
 	ScavTrap d(c);
 
-	std::cout << "\n================== Attacks ==================" << std::endl;
+	std::cout << "\n================== Attacks ===================" << std::endl;
 
 	std::cout << "\nClapTrap objects:" << std::endl;
 	a.attack("42");
@@ -32,7 +34,7 @@ int main(void)
 	d.attack("42");
 	std::cout << std::endl;
 	
-	std::cout << "================== Damage ===================" << std::endl;
+	std::cout << "================== Damage ====================" << std::endl;
 
 	std::cout << "\nClapTrap objects:" << std::endl;
 	a.takeDamage(11);
@@ -54,8 +56,10 @@ int main(void)
 	d.beRepaired(25);
 	std::cout << std::endl;
 
+	std::cout << "================== Skills ====================\n" << std::endl;
+	
 	c.guardGate();
 	
-	std::cout << "=============================================================\n" << std::endl;
+	std::cout << "\n=============================================================\n" << std::endl;
 	return 0;
 }

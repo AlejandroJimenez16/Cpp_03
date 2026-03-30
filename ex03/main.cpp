@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:49:36 by alejandj          #+#    #+#             */
-/*   Updated: 2026/03/29 20:43:14 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/03/30 12:45:16 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main(void)
 	DiamondTrap d("DT");
 	
 
-	std::cout << "\n================== Attacks ==================" << std::endl;
+	std::cout << "\n================== Attacks ===================" << std::endl;
 
 	std::cout << "\nClapTrap object:" << std::endl;
 	a.attack("42");
@@ -45,7 +45,7 @@ int main(void)
 	d.attack("42");
 	std::cout << std::endl;
 	
-	std::cout << "================== Damage ===================" << std::endl;
+	std::cout << "================== Damage ====================" << std::endl;
 
 	std::cout << "\nClapTrap object:" << std::endl;
 	a.takeDamage(11);
@@ -76,7 +76,7 @@ int main(void)
 	d.beRepaired(10);
 	std::cout << std::endl;
 
-	std::cout << "================== Skills ===================" << std::endl;
+	std::cout << "================== Skills ====================" << std::endl;
 	
 	std::cout << "\nScavTrap:" << std::endl;
 	b.guardGate();

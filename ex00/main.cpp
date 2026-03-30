@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:49:36 by alejandj          #+#    #+#             */
-/*   Updated: 2026/03/20 13:36:02 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/03/30 12:36:08 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,20 @@ int main(void)
 	ClapTrap b("Marvin");
 	ClapTrap c(a);
 
-	std::cout << "\n================== Attacks ==================" << std::endl;
+	std::cout << "\n================== Attacks ===================" << std::endl;
 	a.attack("42");
 	b.attack("42");
 	c.attack("42");
 	std::cout << std::endl;
 	
-	std::cout << "================== Damage ===================" << std::endl;
-	a.takeDamage(11);	// a dead
-	b.takeDamage(9);	// b 1 hp
-	c.takeDamage(0);	// No damage
+	std::cout << "================== Damage ====================" << std::endl;
+	a.takeDamage(11);
+	b.takeDamage(9);
+	c.takeDamage(0);
 	std::cout << std::endl;
 
 	std::cout << "================== Repairs ===================" << std::endl;
-	a.beRepaired(5);	// No action, is dead
+	a.beRepaired(5);
 	b.beRepaired(5);
 	c.beRepaired(5);
 	std::cout << std::endl;
