@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 13:10:12 by alejandj          #+#    #+#             */
-/*   Updated: 2026/03/29 20:28:13 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/03/30 13:58:49 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ DiamondTrap::DiamondTrap(std::string name): ClapTrap(name), ScavTrap(name), Frag
 DiamondTrap::DiamondTrap(const DiamondTrap& object): ClapTrap(object), ScavTrap(object), FragTrap(object)
 {
 	std::cout << BLUE << "DiamondTrap: Copy constructor called" << RESET << std::endl;
-	*this = object;
+	_name = object._name;
 }
 
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap& object)
@@ -44,8 +44,6 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& object)
 	if (this != &object)
 	{
 		ClapTrap::operator=(object);
-		ScavTrap::operator=(object);
-		FragTrap::operator=(object);
 		_name = object._name;
 	}
 

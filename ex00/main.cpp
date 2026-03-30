@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:49:36 by alejandj          #+#    #+#             */
-/*   Updated: 2026/03/30 12:36:08 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/03/30 13:03:48 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main(void)
 {
 	ClapTrap a;
-	ClapTrap b("Marvin");
+	ClapTrap b("CT");
 	ClapTrap c(a);
 
 	std::cout << "\n================== Attacks ===================" << std::endl;
@@ -27,7 +27,7 @@ int main(void)
 	std::cout << "================== Damage ====================" << std::endl;
 	a.takeDamage(11);
 	b.takeDamage(9);
-	c.takeDamage(0);
+	c.takeDamage(5);
 	std::cout << std::endl;
 
 	std::cout << "================== Repairs ===================" << std::endl;

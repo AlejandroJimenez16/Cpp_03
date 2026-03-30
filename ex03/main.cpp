@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:49:36 by alejandj          #+#    #+#             */
-/*   Updated: 2026/03/30 12:45:16 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/03/30 13:48:24 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,8 @@ int main(void)
 	c.highFivesGuys();
 
 	std::cout << "\nDiamondTrap:" << std::endl;
+	d.guardGate();
+	d.highFivesGuys();
 	d.whoAmI();
 	
 	std::cout << "=============================================================\n" << std::endl;

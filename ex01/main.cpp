@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:49:36 by alejandj          #+#    #+#             */
-/*   Updated: 2026/03/30 12:39:22 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/03/30 13:10:44 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ int main(void)
 {
 	std::cout << "ClapTrap creation:" << std::endl;
 	ClapTrap a;
-	ClapTrap b("Marvin");
+	ClapTrap b("CT");
 	
 	std::cout << "\nScavTrap creation:" << std::endl;
-	ScavTrap c("Marvin");
+	ScavTrap c("ST");
 	ScavTrap d(c);
 
 	std::cout << "\n================== Attacks ===================" << std::endl;

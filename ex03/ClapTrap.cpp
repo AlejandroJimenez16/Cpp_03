@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:26:05 by alejandj          #+#    #+#             */
-/*   Updated: 2026/03/25 17:29:56 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/03/30 13:30:41 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ ClapTrap::ClapTrap(std::string name)
 ClapTrap::ClapTrap(const ClapTrap& object)
 {
 	std::cout << BLUE << "ClapTrap: Copy constructor called" << RESET << std::endl;
-	*this = object;
+	_name = object._name;
+	_hitPoints = object._hitPoints;
+	_energyPoints = object._energyPoints;
+	_attackDamage = object._attackDamage;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& object)
